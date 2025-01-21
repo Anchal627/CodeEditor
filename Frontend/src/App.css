@@ -1,0 +1,22 @@
+body,
+html {
+  /* overflow: hidden; */
+  /* box-sizing: border-box; */
+  /* overflow: hidden; */
+  /* margin: 0; */
+  /* padding: 0; */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  /* background-image: url("https://tse4.mm.bing.net/th?id=OIP.CY-z_UVrowpH5bj0mnZZ0AHaEK&pid=Api&P=0&h=180"); */
+}
+#root {
+  height: 100%;
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
