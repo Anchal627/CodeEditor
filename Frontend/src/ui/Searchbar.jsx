@@ -11,6 +11,12 @@ const SearchBar = styled.input`
   &:focus {
     border-color: blue;
   }
+  @media (max-width: 768px) {
+    font-size: 14px;
+    width: 250px;
+    margin-left: 20px;
+    padding: 12px 40px 12px 12px;
+  }
 `;
 const SearchItem = styled.div`
   display: flex;
@@ -18,13 +24,30 @@ const SearchItem = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
-const SearchIcon = styled(Search)`
-  position: absolute;
-  left: 982px;
-  color: gray;
-  &:focus {
-    border-color: blue;
+const SearchWrapper = styled.div`
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+`;
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: 40px;
   }
 `;
 const editorData = {
@@ -87,7 +110,7 @@ function Searchbar() {
   }
   return (
     <SearchItem>
-      <div>
+      <SearchWrapper>
         <SearchBar
           type="text"
           placeholder="Search for documentation..."
@@ -98,7 +121,7 @@ function Searchbar() {
         {/* <button style={{ marginLeft: "5px" }}>Search</button> */}
         {/* <SearchIcon /> */}
         {option && (
-          <div
+          <ButtonContainer
             style={{
               display: "flex",
               marginBottom: "10px",
@@ -131,9 +154,9 @@ function Searchbar() {
             >
               Open Documentation
             </button>
-          </div>
+          </ButtonContainer>
         )}
-      </div>
+      </SearchWrapper>
     </SearchItem>
   );
 }

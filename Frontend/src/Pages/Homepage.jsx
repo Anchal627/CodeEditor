@@ -17,10 +17,19 @@ const HomepageLayout = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    height: auto;
+    padding-bottom: 50px;
+    margin: auto;
+  }
 `;
 const Main = styled.div`
   text-align: center;
   margin-top: 60px;
+  @media (max-width: 768px) {
+    width: 95%;
+    margin-top: 40px;
+  }
 `;
 
 function Homepage() {

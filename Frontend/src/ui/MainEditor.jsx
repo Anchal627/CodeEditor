@@ -10,12 +10,23 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   overflow: hidden;
+  @media (max-width: 1176px) {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
 `;
 const Editor = styled.div`
   display: flex;
   flex-direction: column;
   height: 50vh;
   border-radius: 5px;
+  @media (max-width: 1024px) {
+    height: 100vw; /* Increase height for better visibility */
+    width: 55vh;
+    overflow-x: hidden;
+  }
 `;
 const Heading = styled.div`
   padding: 8px;
@@ -36,6 +47,11 @@ const Output = styled.div`
     left: 0;
     width: 100vw;
     height: 100vh;
+  }
+  @media (max-width: 1024px) {
+    height: 60vh; /* Increase height for better visibility */
+    width: 100vw;
+    overflow-x: hidden;
   }
 `;
 

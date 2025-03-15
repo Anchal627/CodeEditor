@@ -10,10 +10,20 @@ const FooterStyled = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    margin-left: 30px;
+  }
 `;
 const Copyright = styled.p`
   font-size: 20px;
   margin-right: 10px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-right: 0;
+  }
 `;
 const Contact = styled.div`
   display: flex;

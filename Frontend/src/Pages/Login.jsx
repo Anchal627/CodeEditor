@@ -17,6 +17,11 @@ const LoginBox = styled.div`
   flex-direction: column;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  @media (max-width: 480px) {
+    height: 300px;
+    width: 200px;
+    padding: 50px;
+  }
 `;
 const Heading = styled.h1`
   text-align: center;
@@ -29,6 +34,9 @@ const Heading = styled.h1`
   margin-bottom: 17px;
 
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 function Login({ setLoginUser }) {

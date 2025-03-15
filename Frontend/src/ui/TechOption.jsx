@@ -17,6 +17,13 @@ const TechFields = styled.div`
   max-width: 100vw;
   overflow: hidden;
   background-color: white;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 const TechSection = styled.div`
   border: 1px soButtond black;
@@ -36,6 +43,11 @@ const List = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   max-width: 100%; /* Prevent overflow */
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
 `;
 const Button = styled.button`
   display: flex;
@@ -56,24 +68,34 @@ const Button = styled.button`
   &:hover {
     background-color: #00d5ff;
   }
+  @media (max-width: 768px) {
+    padding: 15px;
+    font-size: 16px;
+  }
 `;
 const Icon = styled.img`
   width: 30px;
   height: 30px;
 `;
-const Topic = styled.h1`
-  font-size: 22px;
-  font-weight: 400;
-  color: black;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  &:hover {
-    color: blue;
-    text-decoration: underline;
+const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      display: none;
+      max-width: 350px;
+    }
   }
 `;
-
 function TechOption() {
   const navigate = useNavigate();
 
@@ -201,10 +223,10 @@ function TechOption() {
           </Button>
         </List>
       </TechSection>
-      <div>
+      <ImageWrapper>
         {/* <h2>Explore Coding!</h2> */}
         <img style={{ width: "560px", height: "560px" }} src={image} />
-      </div>
+      </ImageWrapper>
       {/* 3*/}
     </TechFields>
   );

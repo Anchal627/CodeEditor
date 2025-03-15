@@ -24,10 +24,18 @@ const Header = styled.div`
   padding: 3px 3px;
   font-weight: bold;
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    padding: 8px;
+  }
 `;
 const MainSection = styled.div`
   flex: 1;
   display: flex;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    overflow-y: auto;
+  }
 `;
 const Sidebar = styled.div`
   border: 1px solid #ddd;
@@ -37,6 +45,13 @@ const Sidebar = styled.div`
   color: ${(props) => (!props.toggle ? "#2e2e2e" : "#f4f4f4")};
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: center;
+  }
 `;
 const Button = styled.button`
   width: 50px;
@@ -52,6 +67,11 @@ const Button = styled.button`
     height: 70px;
     color: white;
   }
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
 `;
 const Icon = styled.img`
   width: 40px;
@@ -64,6 +84,9 @@ const EditorSection = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #ddd;
+  @media (max-width: 1024px) {
+    height: 50vh;
+  }
 `;
 const FileName = styled.div`
   background-color: ${(props) => (props.toggle ? "#2e2e2e" : "#fff")};

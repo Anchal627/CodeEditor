@@ -9,6 +9,10 @@ const About = styled.div`
   margin-right: 50px;
 
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  @media (max-width: 768px) {
+    margin-left: 50px;
+    padding: 20px;
+  }
 `;
 const Heading = styled.h1`
   text-align: center;
@@ -22,6 +26,9 @@ const Content = styled.p`
 
   line-height: 1.6rem;
   margin-bottom: 40px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 const ListItem = styled.li`
   font-size: 1.1rem;

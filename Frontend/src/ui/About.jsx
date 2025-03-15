@@ -9,6 +9,9 @@ const AboutCont = styled.div`
   color: black;
   margin-top: 20px;
   /* gap: 0px; */
+  @media (max-width: 768px) {
+    margin-left: 20px;
+  }
 `;
 const Heading = styled.h1`
   font-size: 42px;

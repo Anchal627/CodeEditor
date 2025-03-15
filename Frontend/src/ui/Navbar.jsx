@@ -1,4 +1,5 @@
 import { Moon, User2Icon } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 const Nav = styled.div`
@@ -9,6 +10,11 @@ const Nav = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1px 1px;
   height: 80px;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
 `;
 const LogoContainer = styled.div`
   display: flex;
@@ -21,6 +27,10 @@ const LogoContainer = styled.div`
   margin-bottom: 4px;
   font-size: 32px;
   font-weight: bold;
+  @media (max-width: 768px) {
+    justify-content: start;
+    margin-left: 0px;
+  }
 `;
 const List = styled.div`
   display: flex;
@@ -29,6 +39,11 @@ const List = styled.div`
   align-items: center;
   gap: 2rem;
   margin-right: 2px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  }
 `;
 const Logo = styled.img`
   border-radius: 100%;
@@ -52,6 +67,20 @@ const Button = styled.button`
   &:hover {
     color: blue;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+`;
+const BurgerMenu = styled.div`
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 function scrollToSection(id) {
   const section = document.getElementById(id);
@@ -60,6 +89,7 @@ function scrollToSection(id) {
   }
 }
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = async () => {
@@ -91,7 +121,8 @@ function Navbar() {
         />
         <CompanyName style={{ fontWeight: "bold" }}>CodeWeaver</CompanyName>
       </LogoContainer>
-      <List>
+      <BurgerMenu onClick={() => setMenuOpen(!menuOpen)}>☰</BurgerMenu>
+      <List isOpen={menuOpen}>
         <Button onClick={() => scrollToSection("footer")}>Contact </Button>
         <Button onClick={() => scrollToSection("section")}>About</Button>
         <Button onClick={handleLogout}>Logout</Button>

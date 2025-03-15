@@ -18,6 +18,11 @@ const SignupBox = styled.div`
   flex-direction: column;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  @media (max-width: 480px) {
+    height: 200;
+    width: 300px;
+    padding: 15px;
+  }
 `;
 const Heading = styled.h1`
   text-align: center;
@@ -30,6 +35,9 @@ const Heading = styled.h1`
   margin-top: 10px;
 
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 function Signup() {
