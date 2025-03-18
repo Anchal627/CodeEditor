@@ -4,4 +4,3 @@ README.md
 package.json
 tailwind.config.js
 Backend/.env
-Backend/db/conn.js
