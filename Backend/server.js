@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000", // Adjust this to your frontend URL
+    origin: "https://codeeditor-tfe8.onrender.com", // Adjust this to your frontend URL
     methods: ["GET", "POST"],
     credentials: true,
   })
