@@ -1,6 +1,4 @@
 node_modules/
-package-lock.json
 README.md
-package.json
 tailwind.config.js
 Backend/.env
