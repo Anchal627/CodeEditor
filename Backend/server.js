@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://codeeditor-tfe8.onrender.com", 
+    origin: "", 
     methods: ["GET", "POST"],
     credentials: true,
   })
