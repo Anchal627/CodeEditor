@@ -168,7 +168,7 @@ function RustEditor() {
     const input = document.getElementById("input").value;
     // Post request to compile endpoint
     axios
-      .post(`http://localhost:8000/compile`, {
+      .post(`https://codeeditor-tfe8.onrender.com/compile`, {
         code: code,
         language: language,
         input: input,
