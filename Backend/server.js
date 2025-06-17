@@ -5,7 +5,7 @@ require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const router = require("./routes/user");
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // app.get("/", (req, res) => {
 //   res.status(201).json("Server Created!");
