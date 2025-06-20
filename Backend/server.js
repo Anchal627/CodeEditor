@@ -14,11 +14,7 @@ const PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-  cors({
-    origin: "https://codeeditor-1-47gc.onrender.com/"
-    credentials: true,
-    methods: ["GET", "POST"],
-  })
+  cors()
 );
 
 app.use(router);
