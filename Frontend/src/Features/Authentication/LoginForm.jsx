@@ -86,7 +86,7 @@ function LoginForm() {
       alert("Password must be equal or greater than 8 characters!");
     } else {
       // console.log("successful");
-      const data = await fetch("https://codeeditor-tfe8.onrender.com/login", {
+      const data = await fetch("https://codeeditor-wf2n.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
