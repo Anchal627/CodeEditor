@@ -14,7 +14,11 @@ const PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-  cors()
+  cors({
+    origin: "https://codeeditor-1-g1db.onrender.com", // Adjust this to your frontend URL
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
 );
 
 app.use(router);
