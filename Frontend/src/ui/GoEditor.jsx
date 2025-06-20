@@ -171,7 +171,7 @@ func main() {
     const input = document.getElementById("input").value;
     // Post request to compile endpoint
     axios
-      .post(`https://codeeditor-tfe8.onrender.com/compile`, {
+      .post(`https://codeeditor-wf2n.onrender.com/compile`, {
         code: code,
         language: language,
         input: input,
