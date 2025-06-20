@@ -94,7 +94,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     let token = localStorage.getItem("usersdatatoken");
-    const res = await fetch("https://codeeditor-tfe8.onrender.com/logout", {
+    const res = await fetch("https://codeeditor-wf2n.onrender.com/logout", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
