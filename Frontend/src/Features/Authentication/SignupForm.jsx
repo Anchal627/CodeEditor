@@ -87,7 +87,7 @@ function SignupForm() {
       alert("Password and confirm password should be same.");
     } else {
       // console.log("successfull");
-      const data = await fetch("https://codeeditor-tfe8.onrender.com/signup", {
+      const data = await fetch("https://codeeditor-wf2n.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
