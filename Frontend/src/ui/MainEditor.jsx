@@ -4,30 +4,33 @@ import styled from "styled-components";
 import MonacoEditor from "@monaco-editor/react";
 
 const Container = styled.div`
-  height: 100%;
   width: 100%;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   overflow: hidden;
+
   @media (max-width: 1176px) {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+    padding: 10px;
   }
 `;
+
 const Editor = styled.div`
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  min-height: 300px;
   border-radius: 5px;
-  @media (max-width: 1024px) {
-    height: 100vw; /* Increase height for better visibility */
-    width: 55vh;
-    overflow-x: hidden;
+
+  @media (max-width: 1176px) {
+    width: 100%;
   }
 `;
+
 const Heading = styled.div`
   padding: 8px;
   color: white;
@@ -40,20 +43,22 @@ const Output = styled.div`
   background-color: white;
   height: 50vh;
   position: relative;
-  /* border: 1px solid black; */
+
   &.full-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 9999;
   }
-  @media (max-width: 1024px) {
-    height: 60vh; /* Increase height for better visibility */
-    width: 100vw;
-    overflow-x: hidden;
+
+  @media (max-width: 1176px) {
+    height: 300px;
+    width: 100%;
   }
 `;
+
 
 const FullScreenButton = styled.button`
   position: absolute;
