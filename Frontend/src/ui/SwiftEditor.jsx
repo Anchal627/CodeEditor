@@ -44,7 +44,7 @@ const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90%;
     height: 40px;
     flex-direction: row;
     overflow-x: scroll;
