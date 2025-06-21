@@ -45,13 +45,18 @@ const Sidebar = styled.div`
   color: ${(props) => (!props.toggle ? "#2e2e2e" : "#f4f4f4")};
   display: flex;
   flex-direction: column;
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 40px;
-    flex-direction: row;
-    overflow-x: auto;
-    justify-content: center;
-  }
+@media (max-width: 768px) {
+  width: 100%;
+  height: 60px;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
 `;
 const Button = styled.button`
   width: 50px;
@@ -67,11 +72,11 @@ const Button = styled.button`
     height: 70px;
     color: white;
   }
-  @media (max-width: 768px) {
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-  }
+@media (max-width: 768px) {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px; 
+}
 `;
 const Icon = styled.img`
   width: 40px;
