@@ -44,7 +44,7 @@ const Sidebar = styled.div`
   flex-direction: column;
   @media (max-width: 768px) {
     width: 100%;
-    height: 50px;
+    height: 40px;
     flex-direction: row;
     overflow-x: auto;
     justify-content: center;
@@ -65,8 +65,8 @@ const Button = styled.button`
     color: white;
   }
   @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin: 5px;
   }
 `;
