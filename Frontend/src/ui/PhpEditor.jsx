@@ -105,6 +105,7 @@ const FileName = styled.div`
 const OutputSection = styled.div`
   flex: 1;
   display: flex;
+  padding:5px;
   flex-direction: column;
   border: 1px solid #ddd;
 `;
