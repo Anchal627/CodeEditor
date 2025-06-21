@@ -47,7 +47,7 @@ const Sidebar = styled.div`
     width: 100%;
     height: 40px;
     flex-direction: row;
-    overflow-x: auto;
+    overflow-x: scroll;
     justify-content: center;
   }
 `;
@@ -68,7 +68,7 @@ const Button = styled.button`
   @media (max-width: 768px) {
     width: 30px;
     height: 30px;
-    margin: 5px;
+    margin: 7px;
   }
 `;
 const Icon = styled.img`
