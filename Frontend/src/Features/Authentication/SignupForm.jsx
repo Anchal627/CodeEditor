@@ -87,7 +87,7 @@ function SignupForm() {
       alert("Password and confirm password should be same.");
     } else {
       // console.log("successfull");
-      const data = await fetch("https://codeeditor-wf2n.onrender.com/signup", {
+      const data = await fetch("http://localhost:8000/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -111,6 +111,7 @@ function SignupForm() {
           confirmPassword: "",
         });
       }
+      navigate("/");
       // console.log(res);
     }
   };

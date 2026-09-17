@@ -80,9 +80,9 @@ router.get("/validuser", authenticate, async (req, res) => {
   // console.log("done");
   try {
     const ValidUserOne = await User.findOne({ _id: req.userId });
-    res.status(401).json({ status: 201, ValidUserOne });
+    res.status(200).json({ status: 200, ValidUserOne });
   } catch (error) {
-    res.status(401).json({ status: 201, error });
+    res.status(401).json({ status: 401, error });
   }
 });
 
@@ -112,7 +112,7 @@ router.post("/compile", (req, res) => {
     java: { language: "java", version: "15.0.2" },
     php: { language: "php", version: "8.2.3" },
     ruby: { language: "ruby", version: "3.0.1" },
-    csharp: { language: "csharp", version: "5.0.201" },
+    csharp: { language: "csharp.net", version: "5.0.201" },
     go: { language: "go", version: "1.16.2" },
     swift: { language: "swift", version: "5.3.3" },
     rust: { language: "rust", version: "1.68.2" },
@@ -136,7 +136,7 @@ router.post("/compile", (req, res) => {
 
   let config = {
     method: "post",
-    url: "https://emkc.org/api/v2/piston/execute",
+    url: "http://localhost:2000/api/v2/execute",
     headers: {
       "Content-Type": "application/json",
     },

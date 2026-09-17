@@ -42,7 +42,7 @@ const List = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
-    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
   }
 `;
 const Logo = styled.img`
@@ -94,7 +94,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     let token = localStorage.getItem("usersdatatoken");
-    const res = await fetch("https://codeeditor-wf2n.onrender.com/logout", {
+    const res = await fetch("http://localhost:8000/logout", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -122,7 +122,7 @@ function Navbar() {
         <CompanyName style={{ fontWeight: "bold" }}>CodeWeaver</CompanyName>
       </LogoContainer>
       <BurgerMenu onClick={() => setMenuOpen(!menuOpen)}>☰</BurgerMenu>
-      <List isOpen={menuOpen}>
+      <List $isOpen={menuOpen}>
         <Button onClick={() => scrollToSection("footer")}>Contact </Button>
         <Button onClick={() => scrollToSection("section")}>About</Button>
         <Button onClick={handleLogout}>Logout</Button>

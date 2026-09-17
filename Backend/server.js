@@ -15,7 +15,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://codeeditor-1-g1db.onrender.com", // Adjust this to your frontend URL
+    // origin: ["http://localhost:3000", "https://codeeditor-1-g1db.onrender.com"],
+    // // origin: "https://codeeditor-1-g1db.onrender.com", // Adjust this to your frontend URL
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
     credentials: true,
   })

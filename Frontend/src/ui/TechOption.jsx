@@ -69,8 +69,8 @@ const Button = styled.button`
     background-color: #00d5ff;
   }
   @media (max-width: 768px) {
-    padding: 15px;
-    font-size: 16px;
+    padding: 25px;
+    font-size: 20px;
   }
 `;
 const Icon = styled.img`
@@ -102,6 +102,7 @@ function TechOption() {
   function handlejsEditor(destination) {
     navigate(destination);
   }
+
   return (
     <TechFields>
       {/* 1 */}
